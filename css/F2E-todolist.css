@@ -1,0 +1,374 @@
+body{
+	font-family: SignPainter, "STKaiti";
+}
+
+body input, textarea{
+	font-family: SignPainter, "STKaiti" ;
+}
+
+input, textarea{
+	border-style: none;
+}
+
+.header{
+	background-color: #4A90E2;
+	text-align: center;
+	color: #00408B;
+}
+
+.header .option:hover{
+	cursor: pointer;
+	background-color: #3982D7;
+}
+.header .option{
+	display: inline-block;
+	font-size: 28px;
+	width: 220px;
+	padding-top: 24px;
+	padding-bottom: 24px;
+}
+.header .option.triggered{
+	color: white !important;
+	border-bottom: 5px solid #00408B;
+}
+
+.content{
+	background-color: #E1E1E1;
+	padding-top: 24px;
+}
+.content.in_progress .isFinished{
+	display: none;
+}
+.content.completed .edit_task{
+	display: none;
+}
+.content.completed .isFinished{
+	display: block;
+}
+
+.brief .p2{
+	display: none;
+}
+.brief .p3{
+	display: none;
+}
+
+.add_task{
+	display: block;
+	width: 620px;
+	background-color: white;
+	margin-left: auto;
+	margin-right: auto;
+	border: 2px solid #C8C8C8;
+	border-radius: 5px;
+	color: #C8C8C8;
+	font-size: 28px;
+	padding-top: 19px;
+	padding-bottom: 18px;
+	padding-left: 33px;
+	margin-bottom: 24px;
+}
+.in_progress .add_task{
+	display: none;
+}
+.completed .add_task{
+	display: none;
+}
+
+.edit_task{
+	width: 620px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #F2F2F2;
+	border-radius: 5px;
+	box-shadow: 0 4px 4px 0 #C8C8C8;
+	margin-bottom: 8px;
+	position: relative;
+}
+.edit_task .data_storage{
+	display: none !important;
+}
+.edit_task .p1{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 30px;
+	border-bottom: 2px solid #C8C8C8;
+	position: relative;
+}
+
+.edit_task .p1 .title_input{
+	width: 200px;
+	margin-top: 5px;
+	margin-bottom: 7px;
+	margin-left: 42px;
+	font-size: 28px;
+	color: black;
+	background-color: rgba(0,0,0,0);
+}
+.edit_task .p1 .title_output{
+	font-size: 28px;
+	color: black;
+	margin-left: 42px;
+}
+.edit_task.isFinished .p1 .title_output{
+	text-decoration: line-through;
+	color: #9B9B9B !important;
+}
+
+.far.fa-calendar-alt, .far.fa-file, .far.fa-comment-dots{
+	font-family: "Font Awesome 5 Free" ,SignPainter,"STKaiti";
+	margin-right: 5px;
+}
+.far.fa-file, .far.fa-comment-dots{
+	margin-top: 3px;
+}
+.isFinished .fa-file{
+	display: none;
+}
+.isFinished .fa-calendar-alt{
+	display: none;
+}
+.isFinished .fa-comment-dots{
+	display: none;
+}
+
+
+.p1 label{
+	height: 24px;
+	width: 24px;
+	position: absolute;
+	top: 20px;
+	left: 32px;
+	background-color: white;
+}
+.p1 .ifFinish{
+	opacity: 0;
+	position: absolute;
+}
+.p1 .checkmark{
+	width: 6px;
+	height: 12px;
+	border-right: solid white 3px;
+	border-bottom: solid white 3px;
+	position: absolute;
+	left: 7px;
+	top: 3px;
+	transform: rotate(45deg);
+	z-index: 10;
+	display: none;
+}
+.p1 .canvas{
+	height: 24px;
+	width: 24px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: white;
+}
+label:hover{
+	cursor: pointer;
+	box-shadow: 0px 0px 5px gray;
+}
+.p1 .ifFinish:checked ~ .checkmark{
+	display: block;
+}
+.p1 .ifFinish:checked ~ .checkmark ~ .canvas{
+	background-color: #4A90E2;
+}
+
+.p1 p{
+	margin-left: 42px;
+	margin-top: 8px;
+	margin-bottom: 5px;
+	font-size: 19px;
+	display: none;
+	color: #757575;
+}
+
+.isHighlight .p1{
+	background-color: #FFF2DC;
+}
+
+.brief .p1 p{
+	display: block;
+}
+
+.brief .p1 .title_input{
+	display: none;
+}
+
+.p1 .title_output{
+	display: none;
+}
+
+.brief .p1 .title_output{
+	display: inline-block !important;
+	margin-left: 42px !important;	
+}
+
+.p1 span{
+	font-size: 24px;
+}
+
+.fas.fa-star{
+	color: #F5A623;
+}
+
+.fas.fa-edit{
+	color: #4A90E2;
+}
+
+.fa-star{
+	position: absolute;
+	right: 88px;
+	top: 24px;
+}
+
+.fa-edit{
+	position: absolute;
+	right: 24px;
+	top: 24px;
+}
+
+.fa-edit, .fa-star:hover{
+	cursor: pointer;
+}
+
+.edit_task .p2{
+	padding-top: 24px;
+	padding-bottom: 24px;
+	padding-left: 72px;
+	font-size: 24px;
+}
+
+.date, .time{
+	width: 162px;
+	height: 35px;
+	border-radius: 2px;
+	font-size: 19px;
+	padding-left: 16px;
+	margin-bottom: 22px;
+	margin-top: 8px;
+}
+
+.date{
+	margin-left: 25px;
+}
+
+.comment{
+	width: 445px;
+	height: 120px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-left: 16px;
+	padding-right: 16px;
+	margin-top: 8px;
+	margin-left: 25px;
+	font-size: 16px;
+
+}
+
+.file{
+	margin-left: 25px;
+	margin-top: 11px;
+}
+
+.file_info{
+	display: inline-block;
+	padding-right: 10px;
+}
+
+.file_info .file_info1{
+	font-size: 19px;
+}
+
+.file_info .file_info2{
+	font-size: 19px;
+	color: #757575;
+}
+
+.upload_file_btn{
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	background-color: #C8C8C8;
+	color: white;
+	z-index: 10;
+	overflow: hidden;
+	position: relative;
+	vertical-align: top;
+}
+
+.upload_file_btn:hover{
+	background-color: #4A90E2;
+}
+
+.upload_file_btn input{
+	width: 100px;
+	height: 100px;
+	background-color: #C8C8C8;
+	opacity: 0;
+	transform: translateX(-61px);
+}
+
+.upload_file_btn input:hover{
+	cursor: pointer;
+}
+
+.upload_file_btn p{
+	position: absolute;
+	font-size: 50px;
+	left: 6px;
+	top: -6px;
+}
+
+.cancel, .confirm{
+	font-size: 28px;
+	display: inline-block;
+	width: 50%;
+	text-align: center;
+	padding-top: 16px;
+	padding-bottom: 16px;
+}
+
+.cancel{
+	background-color: #FFFFFF;
+	color: #D0021B;
+}
+
+.cancel:hover{
+	background-color: #FDFDFD;
+	cursor: pointer;
+	color: orange;
+}
+
+.confirm{
+	background-color: #4A90E2;
+	color: white;
+}
+
+.confirm:hover{
+	background-color: #3982D7;
+	cursor: pointer;
+}
+
+.foot{
+	text-align: left;
+	font-size: 24px;
+	color: #C8C8C8;
+	margin-left: auto;
+	margin-right: auto;
+	transform: translateX(-80%);
+	width: 200px;
+	padding-bottom: 46px;
+}
+
+.fa-calendar-alt:before, .fa-file:before, .fa-comment-dots:before{
+	margin-right: 3px;
+}
+
+@media (max-width: 670px) {
+	body{
+		width: 670px;
+	}
+}
